@@ -1,0 +1,35 @@
+<body >
+    <form onsubmit="validation()" name="f">
+        username:
+        <input type="text" name="fname"><br><br>
+        password:
+        <input type="password" name="pass"><br><br>
+        Email:
+        <input type="email" name="email"><br><br>
+        <input type="submit"  name="submit" value="Login">
+    </form>
+    <script>
+        function validation(){
+            var name=document.forms["f"]["fname"].value;
+            var password=document.forms["f"]["pass"].value;
+            var email=document.forms["f"]["email"].value;
+
+            if(name=="" || email==""){
+                alert("Invalid username or Email");
+                return false;
+            }
+            if("password=="){
+                alert("Invalid password");
+                return false;
+            }
+            if(password.length<5){
+                alert("Password must be 5 cgharacter");
+                return false;
+            }
+
+            alert("login Succesfull");
+
+        }
+    </script>
+    
+</body>
